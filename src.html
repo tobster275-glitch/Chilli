@@ -1,0 +1,538 @@
+<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}</style></head><body>
+<title>ch://i</title>
+<meta name="description" content="ch://i (said “chilli”) makes Material Keys, a Material 3 keyboard app for Android, and Metaria Linux, a Material-designed Linux distro based on Ubuntu.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='18' fill='%23C3C5F0'/%3E%3Ctext x='32' y='41' font-family='sans-serif' font-size='28' font-weight='700' text-anchor='middle' fill='%2312123A'%3E%3A//%3C/text%3E%3C/svg%3E">
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta http-equiv="Content-Security-Policy" content="base-uri 'none'; form-action 'none'; object-src 'none'">
+<meta name="referrer" content="no-referrer">
+<script>try{var th=localStorage.getItem("chi-theme");if(th==="dark"||th==="light")document.documentElement.setAttribute("data-theme",th)}catch(e){}</script>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&family=Outfit:wght@500;600;700&family=Inter:wght@400;500;600;700&family=Nunito:wght@500;600;700;800&display=swap">
+<style>:root{--bg:#0F0F14;--surf:#17171E;--surf2:#22222C;--fg:#E7E4EC;--mut:#A9A7B8;--p:#C3C5F0;--on-p:#14153F;--pc:#C3C5F0;--on-pc:#12123A;--sc:#C5C5DB;--on-sc:#18182B;--tc:#FFE0FF;--on-tc:#35133A;--shadow:0 10px 40px rgba(0,0,0,.45);--spring:cubic-bezier(.34,1.56,.64,1);--display:'Outfit','Inter',system-ui,sans-serif;--round:'Nunito','Figtree',system-ui,sans-serif;--text:'Figtree','Inter',system-ui,sans-serif;color-scheme:dark}@media (prefers-color-scheme: light){:root:not([data-theme="dark"]){--bg:#FCF8FF;--surf:#F2EEF8;--surf2:#E8E4F0;--fg:#1B1B21;--mut:#5F5E6E;--p:#4F55A6;--on-p:#FFFFFF;--pc:#DDDEFF;--on-pc:#0A0B4A;--sc:#E1E0F2;--on-sc:#191A2C;--tc:#FFD8FA;--on-tc:#38003A;--shadow:0 10px 36px rgba(60,50,110,.18);color-scheme:light}}:root[data-theme="light"]{--bg:#FCF8FF;--surf:#F2EEF8;--surf2:#E8E4F0;--fg:#1B1B21;--mut:#5F5E6E;--p:#4F55A6;--on-p:#FFFFFF;--pc:#DDDEFF;--on-pc:#0A0B4A;--sc:#E1E0F2;--on-sc:#191A2C;--tc:#FFD8FA;--on-tc:#38003A;--shadow:0 10px 36px rgba(60,50,110,.18);color-scheme:light}*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}button,a,.fam,.card,.dock,.shape,.chip,.logo{-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}button,a{outline:none}button:focus-visible,a:focus-visible{outline:3px solid var(--p);outline-offset:3px}body{margin:0;background:var(--bg);color:var(--fg);font:400 1rem/1.55 var(--text);padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px));-webkit-font-smoothing:antialiased}.wrap{max-width:1120px;margin-inline:auto}h1,h2,h3,p{font-family:var(--round);margin:0;text-wrap:balance;overflow-wrap:break-word}p{margin:0}.ic{width:24px;height:24px;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round;flex:none}[hidden]{display:none!important}.top{display:flex;align-items:center;justify-content:space-between;padding-block:18px;gap:12px}.logo{display:flex;align-items:center;gap:12px;color:var(--fg)}.wm{font:700 1.7rem var(--display);letter-spacing:-.03em;color:var(--fg)}.wm b{font-weight:700;color:var(--p)}@media(max-width:380px){.mark{width:44px;height:44px}.wm{font-size:1.35rem}.logo{gap:8px}}.mark{width:58px;height:58px;display:block;overflow:visible;transform-origin:50% 50%;transition:transform .6s var(--spring)}.mark .mk{font:700 80px var(--display);fill:#12123A;letter-spacing:-3px}.tools{position:relative;display:flex;align-items:center;gap:8px}.icon-btn{width:46px;height:46px;border-radius:50%;border:0;background:var(--surf2);color:var(--fg);display:grid;place-items:center;cursor:pointer;transition:transform .5s var(--spring),background .3s,color .3s}.icon-btn[aria-expanded="true"]{background:var(--p);color:var(--on-p)}@media(hover:hover){.icon-btn:hover{transform:scale(1.07)}.lang-btn{height:46px;padding:0 16px 0 14px;border-radius:999px;border:0;background:var(--surf2);color:var(--fg);display:flex;align-items:center;gap:8px;font:600 .9rem var(--text);letter-spacing:.04em;cursor:pointer;transition:transform .5s var(--spring),background .3s,color .3s}.lang-btn:hover{transform:scale(1.07)}.lang-btn:active{transform:scale(.9)}.lang-btn .ic{width:20px;height:20px}.lang-btn[aria-expanded="true"]{background:var(--p);color:var(--on-p)}.lang-btn{height:54px;padding:0 20px 0 18px;font-size:1rem}}.icon-btn:active{transform:scale(.9)}.menu{position:absolute;right:0;max-height:calc(100dvh - 130px);overflow-y:auto;overscroll-behavior:contain;top:calc(100% + 10px);min-width:210px;padding:8px;border-radius:28px;background:color-mix(in srgb,var(--surf2) 55%,transparent);-webkit-backdrop-filter:blur(28px) saturate(1.5);backdrop-filter:blur(28px) saturate(1.5);box-shadow:var(--shadow);z-index:30;transform-origin:top right;animation:menuIn .5s var(--spring)}.scrim{position:fixed;inset:0;z-index:22;background:color-mix(in srgb,var(--bg) 45%,transparent);-webkit-backdrop-filter:blur(22px);backdrop-filter:blur(22px);animation:fadeIn .3s ease-out}@keyframes fadeIn{from{opacity:0}}@keyframes menuIn{from{transform:scale(.7) translateY(-10px);opacity:0}}@keyframes menuOut{to{transform:scale(.7) translateY(-10px);opacity:0}}.menu.out{animation:menuOut .3s cubic-bezier(.4,0,.8,.6) forwards;pointer-events:none}.menu button{display:flex;align-items:center;justify-content:space-between;gap:12px;width:100%;height:48px;padding:0 16px;border:0;border-radius:20px;background:transparent;color:var(--fg);font:600 1rem var(--text);cursor:pointer;transition:transform .4s var(--spring),background .2s}@media(hover:hover){.menu button:hover{background:color-mix(in srgb,var(--fg) 8%,transparent)}}.menu button:active{transform:scale(.94)}.menu button[aria-checked="true"]{background:var(--p);color:var(--on-p)}.menu .ic{width:20px;height:20px}.mh{margin:0;padding:10px 16px 4px;font:600 .75rem var(--text);letter-spacing:.06em;text-transform:uppercase;color:var(--mut)}.mh.sep{margin-top:6px;padding-top:14px;border-top:1px solid color-mix(in srgb,var(--fg) 12%,transparent)}.enter .pop{animation:pop .75s var(--spring) backwards;animation-delay:calc(var(--i,0)*70ms)}@keyframes pop{from{transform:translateY(28px) scale(.9)}}.chip{display:inline-flex;align-items:center;gap:7px;height:28px;padding:0 12px;border-radius:999px;font:600 .78rem var(--text);letter-spacing:.02em;background:color-mix(in srgb,currentColor 13%,transparent);white-space:nowrap}.chip::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;animation:pulse 2.2s ease-in-out infinite}@keyframes pulse{50%{transform:scale(1.8);opacity:.35}}.btn{display:inline-flex;align-items:center;gap:10px;height:54px;padding:0 28px;border-radius:999px;border:0;font:600 1rem var(--text);cursor:pointer;text-decoration:none;transition:transform .5s var(--spring),border-radius .5s var(--spring)}@media(hover:hover){.btn:hover{transform:scale(1.06)}}.btn:active{transform:scale(.92)}.btn-p{background:var(--p);color:var(--on-p)}.btn-t{background:var(--surf2);color:var(--fg)}.c-p{--c:var(--pc);--on:var(--on-pc)}.c-s{--c:var(--sc);--on:var(--on-sc)}.c-t{--c:var(--tc);--on:var(--on-tc)}.view{padding-bottom:140px}#groups{margin-top:32px}.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding-block:24px 56px}@media(max-width:820px){.hero{grid-template-columns:1fr;gap:20px;padding-bottom:40px}}.hero h1{font-weight:700;font-size:clamp(2.5rem,7.4vw,5rem);line-height:1.02;letter-spacing:-.035em;margin:0 0 18px}.hero h1 em{font-style:normal;color:var(--p)}.lede{font-size:1.15rem;color:var(--mut);max-width:34em}.cta{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}.stage{position:relative;width:min(100%,440px);aspect-ratio:1;margin-inline:auto}.shape{position:absolute;aspect-ratio:1;animation:float 7s ease-in-out infinite}.shape-in{all:unset;touch-action:manipulation;display:block;width:100%;height:100%;cursor:pointer;border-radius:50%}.shape-in:focus-visible{outline:3px solid var(--p);outline-offset:4px}.shape svg{display:block;width:100%;height:100%;overflow:visible}.s1{width:58%;left:0;top:10%}.s2{width:40%;right:0;top:0;animation-duration:8s;animation-delay:-2s}.s3{width:48%;right:6%;bottom:0;animation-duration:9s;animation-delay:-4s}@keyframes float{50%{transform:translateY(-14px) rotate(3deg)}}.spin{transform-box:fill-box;transform-origin:center;animation:spin 40s linear infinite}@keyframes spin{to{transform:rotate(360deg)}}.fams{display:grid;gap:16px;grid-template-columns:1fr}@media(min-width:900px){.fams{grid-template-columns:repeat(3,1fr)}}.fam{background:var(--c);color:var(--on);position:relative;overflow:hidden;border-radius:42px;padding:26px;display:flex;flex-direction:column;gap:16px;min-width:0;transition:transform .55s var(--spring),border-radius .55s var(--spring),scale .5s var(--spring)}@media(hover:hover){.fam:hover{transform:translateY(-8px) rotate(-.8deg);border-radius:54px 42px 54px 42px}}.fam h3,.fam p,.fam .tiny{position:relative}.fam h3{font-weight:700;font-size:1.65rem;line-height:1.1;letter-spacing:-.02em}.fam p{opacity:.8}.band{transition:scale .5s var(--spring);margin-top:48px;background:var(--surf);border-radius:38px;padding:clamp(18px,3.4vw,32px);display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center}@media(max-width:700px){.band{grid-template-columns:1fr}.band .stage-sm{order:-1}}.band h2{font-weight:700;font-size:clamp(1.45rem,3.4vw,2.05rem);line-height:1.1;letter-spacing:-.025em;margin:0 0 8px}.band p{color:var(--mut);max-width:32em}.band .btn{margin-top:16px}.stage-sm{width:104px;aspect-ratio:1}.band .shape{position:relative;animation-duration:6s}.band+.band{margin-top:20px}.tiny{display:flex;align-items:center;gap:8px;width:fit-content;max-width:100%;margin-top:auto;padding:8px 14px;border-radius:16px;background:color-mix(in srgb,currentColor 12%,transparent);color:inherit;font-size:.8rem;font-weight:500}.toast{position:fixed;left:50%;width:max-content;bottom:calc(100px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:40;display:flex;align-items:center;gap:10px;max-width:calc(100vw - 32px);padding:14px 22px;border-radius:999px;background:var(--p);color:var(--on-p);font:600 .95rem var(--text);box-shadow:var(--shadow);animation:toastIn .6s var(--spring) backwards}@keyframes toastIn{from{transform:translateX(-50%) translateY(30px) scale(.8);opacity:0}}.bit{position:fixed;z-index:41;pointer-events:none}.foot-link{color:inherit;text-underline-offset:3px}@media(hover:hover){.foot-link:hover{color:var(--p)}}.foot{margin-top:56px;color:var(--mut);font-size:.9rem;display:flex;flex-wrap:wrap;gap:8px 24px;justify-content:space-between}.ph{padding-block:24px 8px}.ph h1{font-weight:700;font-size:clamp(2.4rem,6.5vw,4.2rem);letter-spacing:-.035em;line-height:1.05}.ph p{color:var(--mut);font-size:1.1rem;margin-top:10px}.grid{display:grid;gap:14px;grid-template-columns:repeat(auto-fit,minmax(250px,1fr))}.card{background:var(--c);color:var(--on);border-radius:38px;padding:26px;display:flex;flex-direction:column;gap:12px;min-width:0;position:relative;overflow:hidden;min-height:250px;transition:transform .55s var(--spring),scale .5s var(--spring)}@media(hover:hover){@media(hover:hover){.card:hover{transform:translateY(-6px) rotate(-.7deg)}}}.shape-in.app{border-radius:50%}.shape-in.app svg{display:block;width:100%;height:100%}.card h3{position:relative;font-weight:800;font-size:1.9rem;letter-spacing:-.02em;line-height:1.05}.card p{position:relative;opacity:.82;font-size:1.02rem;line-height:1.55}.card .tags{position:relative}.blob{position:absolute;right:-14%;bottom:-20%;width:64%;aspect-ratio:1;color:color-mix(in srgb,var(--on) 14%,transparent);pointer-events:none;transition:transform .9s var(--spring)}@media(hover:hover){.card:hover .blob,.fam:hover .blob{transform:rotate(90deg) scale(1.18)}}.tags{display:flex;flex-wrap:wrap;gap:6px;margin-top:auto;padding-top:4px}.sbar{position:fixed;left:0;right:0;top:0;z-index:23;display:flex;flex-direction:column;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top,0px)) max(16px,env(safe-area-inset-right,0px)) 0 max(16px,env(safe-area-inset-left,0px));pointer-events:none;transform:translateY(-140%);visibility:hidden;transition:transform .6s var(--spring),visibility 0s .6s}.sbar.show{transform:none;visibility:visible;transition:transform .6s var(--spring),visibility 0s}.sfield{pointer-events:auto;width:min(100%,560px);height:54px;display:flex;align-items:center;gap:12px;padding:0 7px 0 18px;border-radius:999px;background:color-mix(in srgb,var(--surf2) 58%,transparent);-webkit-backdrop-filter:blur(22px) saturate(1.5);backdrop-filter:blur(22px) saturate(1.5);box-shadow:var(--shadow);color:var(--fg)}.sfield:focus-within{outline:3px solid var(--p);outline-offset:2px}.sfield input{flex:1;min-width:0;height:100%;border:0;background:transparent;color:var(--fg);font:500 1rem var(--text);outline:none;-webkit-appearance:none;appearance:none;caret-color:var(--p);-webkit-text-fill-color:var(--fg)}.sfield input::placeholder{color:var(--mut)}.sfield input::-webkit-search-cancel-button{display:none}.sfield .x{width:40px;height:40px;border-radius:50%;border:0;background:color-mix(in srgb,var(--fg) 10%,transparent);color:var(--fg);display:grid;place-items:center;cursor:pointer;flex:none;transition:transform .45s var(--spring)}.sfield .x:active{transform:scale(.85)}.sfield .x .ic{width:18px;height:18px}.searching .top{visibility:hidden}.spanel{pointer-events:auto;width:min(100%,560px);max-height:min(294px,45dvh);overflow-y:auto;overflow-x:hidden;touch-action:pan-y;-webkit-overflow-scrolling:touch;padding:6px;border-radius:28px;background:color-mix(in srgb,var(--surf2) 62%,transparent);-webkit-backdrop-filter:blur(24px) saturate(1.5);backdrop-filter:blur(24px) saturate(1.5);box-shadow:var(--shadow);transform-origin:top center;animation:menuIn .5s var(--spring);overscroll-behavior:contain}.spanel .none{padding:16px}.srow{display:flex;align-items:center;gap:14px;width:100%;height:46px;padding:0 12px;border:0;border-radius:18px;background:transparent;color:color-mix(in srgb,var(--fg) 80%,transparent);text-align:left;cursor:pointer;font:400 .98rem var(--text);transition:transform .4s var(--spring),background .2s}.srow .ic{width:18px;height:18px;opacity:.5}.srow span{min-width:0;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.srow b{font-weight:600;color:var(--fg)}.srow:active{transform:scale(.97);background:color-mix(in srgb,var(--fg) 8%,transparent)}@media(hover:hover){.srow:hover{background:color-mix(in srgb,var(--fg) 8%,transparent)}}.none{color:var(--mut);font-size:1.1rem;padding:24px 4px 80px;overflow-wrap:anywhere}#groups.qmode .pop{animation:none}.dock{position:fixed;width:max-content;left:50%;bottom:calc(14px + env(safe-area-inset-bottom,0px));transform:translateX(-50%);z-index:20;display:flex;gap:2px;padding:6px;border-radius:999px;background:color-mix(in srgb,var(--surf2) 86%,transparent);-webkit-backdrop-filter:blur(9px);backdrop-filter:blur(9px);box-shadow:var(--shadow);overflow:hidden}.ind.ready{transition:left .6s cubic-bezier(.34,1.28,.64,1),width .6s cubic-bezier(.34,1.28,.64,1)}.ind{position:absolute;top:6px;bottom:6px;left:0;width:0;border-radius:999px;background:var(--p)}.d-item{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:3px;width:80px;height:54px;padding:0;border-radius:999px;color:var(--fg);text-decoration:none;font:600 .68rem var(--text);white-space:nowrap;transition:transform .45s var(--spring),color .25s}.d-item:active{transform:scale(.88)}.d-item.on{color:var(--on-p);transition:transform .45s var(--spring),color .2s .08s}.d-item .ic{width:22px;height:22px}.d-item.on .ic{animation:hop .7s .15s var(--spring) backwards}@keyframes hop{0%{transform:translateY(8px) scale(.7)}60%{transform:translateY(-4px) scale(1.15)}100%{transform:none}}@media(min-width:1000px){body{padding-left:max(48px,env(safe-area-inset-left,0px));padding-right:max(48px,env(safe-area-inset-right,0px))}.wrap{max-width:1640px}.top{padding-block:28px}.tools{top:-6px}.mark{width:76px;height:76px}.wm{font-size:2.2rem}.icon-btn{width:54px;height:54px}.hero{grid-template-columns:1.05fr .95fr;gap:56px;min-height:min(760px,calc(100dvh - 240px));padding-block:8px 24px}.hero h1{font-size:clamp(3rem,min(5.6vw,10dvh),8rem);margin-bottom:22px}.lede{font-size:clamp(1.2rem,1.4vw,1.6rem);max-width:30em}.cta{margin-top:clamp(20px,4dvh,40px);gap:16px}.btn{height:62px;padding:0 36px;font-size:1.1rem}.stage{width:min(100%,680px,max(300px,calc(100dvh - 270px)))}.fams{gap:24px}.fam{padding:34px;border-radius:50px}.fam h3{font-size:2rem}.band{padding:40px 48px;border-radius:46px}.band h2{font-size:clamp(1.9rem,2.3vw,2.6rem)}.stage-sm{width:150px}.grid{grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:20px}.card{padding:32px;border-radius:44px;min-height:290px}.card h3{font-size:2.2rem}.ph h1{font-size:clamp(3.2rem,5vw,6rem)}.dock{padding:8px}.d-item{flex-direction:row;gap:10px;height:64px;width:152px;font-size:.95rem}.d-item .ic{width:26px;height:26px}.ind{top:8px;bottom:8px}.sfield{width:min(100%,720px);height:62px}.spanel{width:min(100%,720px)}.srow{height:52px;font-size:1.05rem}.menu{min-width:210px}}@media(min-width:1500px){html{font-size:18px}}@media(min-width:1900px){html{font-size:20px}}.hs{will-change:transform}:root{--e-cubic:cubic-bezier(.33,1,.68,1);--e-sine:cubic-bezier(.37,0,.63,1);--e-back:cubic-bezier(.34,1.56,.64,1);--e-elastic:linear(0,.38 4%,.9 9%,1.2 14%,1.17 19%,.95 27%,.97 34%,1.02 42%,1)}.enter .pop.rv-wait{opacity:0;animation:none}.enter .pop.rv-in{animation:rvIn .6s var(--e-cubic) backwards;animation-delay:calc(var(--rd,0)*55ms)}@keyframes rvIn{from{opacity:0;transform:translateY(14px)}}.hero h1 em{display:inline-block;transform-origin:50% 90%;margin-right:.12em}.shape-in svg .tw{transform-box:fill-box;transform-origin:center;animation:twinkle 3.6s var(--e-sine) infinite}.hs:nth-child(2) .shape-in svg .tw{animation-delay:-1.2s}.hs:nth-child(3) .shape-in svg .tw{animation-delay:-2.4s}@keyframes twinkle{0%{transform:rotate(0) scale(.88)}50%{transform:rotate(45deg) scale(1.2)}100%{transform:rotate(90deg) scale(.88)}}.dock{animation:dockIn .9s var(--e-back) .35s backwards}@keyframes dockIn{from{transform:translate(-50%,170%)}}.btn .ic{transition:transform .45s var(--e-back)}@media(hover:hover){.btn:hover .ic:last-child{transform:translateX(5px)}}@media(hover:hover){.logo .mark:hover{transform:rotate(-8deg) scale(1.1)}}.logo.down .mark{transform:scale(.86)}.card.down,.fam.down{scale:.96}.band.down{scale:.985}.ver{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer;-webkit-user-select:none;user-select:none;transition:scale .5s var(--spring)}.ver:active{scale:.9}.band{position:relative;overflow:hidden;transition:scale .5s var(--spring),transform .55s var(--spring)}@media(hover:hover){.band:hover{transform:translateY(-6px) rotate(-.7deg)}}.band.tap{transform:translateY(-6px) rotate(-.7deg)}.band>*:not(.blob){position:relative}.band{background:var(--c);color:var(--on)}.band p{color:var(--on);opacity:.82}#make .btn{background:var(--sc);color:var(--on-sc);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--sc),#000 28%)}.band .btn{background:var(--p);color:var(--on-p);box-shadow:inset 0 0 0 1px color-mix(in srgb,var(--p),#000 28%)}.band .blob{width:min(64%,320px);right:-40px;bottom:-90px}@media(min-width:900px){#make.band{grid-template-columns:auto 1fr;column-gap:28px;align-items:center}#make.band .stage-sm.app{order:-1}.band:not(#make){grid-template-columns:1fr}}.band .blob{color:color-mix(in srgb,var(--on) 14%,transparent)}@media(hover:hover){.band:hover .blob{transform:rotate(90deg) scale(1.18)}}.band.tap .blob{transform:rotate(90deg) scale(1.18)}.band .stage-sm.app{width:56px;animation:none}.shape-in.app{transition:transform .5s var(--spring)}.shape-in.app.down{transform:scale(.86)}.card.tap{transform:translateY(-6px) rotate(-.7deg)}.card.tap .blob,.fam.tap .blob{transform:rotate(90deg) scale(1.18)}.fam.tap{transform:translateY(-8px) rotate(-.8deg);border-radius:54px 42px 54px 42px}@media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition-duration:.01ms!important}}</style>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+<symbol id="i-spark" viewBox="0 0 24 24"><path d="M12 2C12.7 7.4 16.6 11.3 22 12C16.6 12.7 12.7 16.6 12 22C11.3 16.6 7.4 12.7 2 12C7.4 11.3 11.3 7.4 12 2Z"/></symbol>
+<symbol id="i-home" viewBox="0 0 24 24"><path d="M3 11l9-8 9 8"/><path d="M5 10v10h5v-6h4v6h5V10"/></symbol>
+<symbol id="i-grid" viewBox="0 0 24 24"><rect x="3" y="3" width="7.5" height="7.5" rx="2.5"/><rect x="13.5" y="3" width="7.5" height="7.5" rx="2.5"/><rect x="3" y="13.5" width="7.5" height="7.5" rx="2.5"/><rect x="13.5" y="13.5" width="7.5" height="7.5" rx="2.5"/></symbol>
+<symbol id="i-globe" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3.2 3 3.2 15 0 18M12 3c-3.2 3-3.2 15 0 18"/></symbol>
+<symbol id="i-theme" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18a9 9 0 000-18z" fill="currentColor"/></symbol>
+<symbol id="i-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 00.33 1.82l.06.06a2 2 0 010 2.83 2 2 0 01-2.83 0l-.06-.06a1.65 1.65 0 00-1.82-.33 1.65 1.65 0 00-1 1.51V21a2 2 0 01-2 2 2 2 0 01-2-2v-.09A1.65 1.65 0 009 19.4a1.65 1.65 0 00-1.82.33l-.06.06a2 2 0 01-2.83 0 2 2 0 010-2.83l.06-.06a1.65 1.65 0 00.33-1.82 1.65 1.65 0 00-1.51-1H3a2 2 0 01-2-2 2 2 0 012-2h.09A1.65 1.65 0 004.6 9a1.65 1.65 0 00-.33-1.82l-.06-.06a2 2 0 010-2.83 2 2 0 012.83 0l.06.06a1.65 1.65 0 001.82.33H9a1.65 1.65 0 001-1.51V3a2 2 0 012-2 2 2 0 012 2v.09a1.65 1.65 0 001 1.51 1.65 1.65 0 001.82-.33l.06-.06a2 2 0 012.83 0 2 2 0 010 2.83l-.06.06a1.65 1.65 0 00-.33 1.82V9a1.65 1.65 0 001.51 1H21a2 2 0 012 2 2 2 0 01-2 2h-.09a1.65 1.65 0 00-1.51 1z"/></symbol>
+<symbol id="i-search" viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></symbol>
+<symbol id="i-close" viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18"/></symbol>
+<symbol id="i-check" viewBox="0 0 24 24"><path d="M5 12.5l5 5 9-10.5"/></symbol>
+<symbol id="i-arrow" viewBox="0 0 24 24"><path d="M5 12h14"/><path d="M13 6l6 6-6 6"/></symbol>
+<symbol id="i-info" viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v6"/><circle cx="12" cy="7.6" r=".6"/></symbol>
+<symbol id="i-flame" viewBox="0 0 24 24"><path d="M12 2c1 4 5 6 5 11a5 5 0 01-10 0c0-2 1-3.5 2-4.5 0 2 1 3 2 3 0-3-1-5 1-9.5z"/></symbol>
+</svg>
+<div class="wrap">
+<header class="top">
+<div class="logo" id="logo" role="img" aria-label="ch://i"><span class="wm">ch<b>://</b>i</span></div>
+<div class="tools">
+<button class="icon-btn" id="langBtn" type="button" aria-haspopup="true" aria-expanded="false" data-al="label.lang"><svg class="ic" aria-hidden="true"><use href="#i-globe"/></svg></button>
+<button class="icon-btn" id="themeBtn" type="button" aria-haspopup="true" aria-expanded="false" data-al="label.theme"><svg class="ic" aria-hidden="true"><use href="#i-theme"/></svg></button>
+</div>
+</header>
+<main id="home" class="view">
+<section class="hero">
+<div>
+<h1 class="pop" style="--i:1" data-th="hero.h1">Software built with a little <em>heat</em>.</h1>
+<p class="lede pop" style="--i:2" data-t="hero.lede">A keyboard app for Android and a Linux distro, both in Material design.</p>
+<div class="cta pop" style="--i:3">
+<a class="btn btn-p" href="#products"><span data-t="hero.cta1">Explore products</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+<button class="btn btn-t" id="meet" type="button" data-t="hero.cta2">What we’re making</button>
+</div>
+</div>
+</section>
+<section class="band c-p pop" id="make" style="--i:0">
+<div>
+<h2 data-t="band.title">Type with a little spark.</h2>
+<p data-t="band.text">Material Keys is a keyboard app for Android, coming soon.</p>
+<a class="btn btn-p" href="#products"><span data-t="band.btn">See Material Keys</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+</div>
+</section>
+<section class="band c-s pop" style="--i:1">
+<div>
+<h2 data-t="band2.title">A desktop with a little spark.</h2>
+<p data-t="band2.text">Metaria Linux is a Linux distro based on Ubuntu, with a Material design, coming soon.</p>
+<a class="btn btn-p" href="#products"><span data-t="band2.btn">See Metaria Linux</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a>
+</div>
+</section>
+<footer class="foot">
+<button class="ver" type="button">v5.7</button>
+<a class="foot-link" href="https://www.tiktok.com/@lemons3682" target="_blank" rel="noopener noreferrer">TikTok @lemons3682</a>
+</footer>
+</main>
+<main id="products" class="view" hidden>
+<div class="ph">
+<h1 class="pop" style="--i:0" data-t="prod.title">Products</h1>
+<p class="pop" style="--i:1" data-t="prod.sub">Everything in the lineup, in one place.</p>
+</div>
+<footer class="foot">
+<button class="ver" type="button">v5.7</button>
+<a class="foot-link" href="https://www.tiktok.com/@lemons3682" target="_blank" rel="noopener noreferrer">TikTok @lemons3682</a>
+</footer>
+</main>
+<main id="about" class="view" hidden>
+<div class="ph">
+<h1 class="pop" style="--i:1" data-t="about.h1">Spicy things, written in code.</h1>
+<p class="pop" style="--i:2;max-width:34em" data-t="about.p">The story behind the name, the symbols and Material Keys.</p>
+</div>
+<div class="fams" style="margin-top:32px">
+<article class="fam c-p pop" style="--i:3">
+<h3 data-t="about.c1t">Why chilli?</h3>
+<p data-t="about.c1p">ch://i is pronounced “chilli”. I love anything spicy, so the company is named after something hot.</p>
+</article>
+<article class="fam c-s pop" style="--i:4">
+<h3 data-t="about.c2t">Why ://?</h3>
+<p data-t="about.c2p">I’m really into coding, so the name borrows :// from web addresses. It’s inspired by the Mozilla logo, moz://a. Mozilla and Firefox are among my favourite companies.</p>
+</article>
+<article class="fam c-t pop" style="--i:5">
+<h3 data-t="about.c3t">Where Material Keys comes from</h3>
+<p data-t="about.c3p">Keyboards like Gboard and SwiftKey have boring designs and collect your data aggressively. What if you could have Gboard + no data collection, tons of customization and an actually Material design like Google promised?</p>
+</article>
+</div>
+<div class="cta" style="margin-top:28px"><a class="btn btn-t" href="https://www.tiktok.com/@lemons3682" target="_blank" rel="noopener noreferrer"><span><span data-t="about.tt">Find me on TikTok</span> · @lemons3682</span> <svg class="ic" aria-hidden="true"><use href="#i-arrow"/></svg></a></div>
+<footer class="foot">
+<button class="ver" type="button">v5.7</button>
+<a class="foot-link" href="https://www.tiktok.com/@lemons3682" target="_blank" rel="noopener noreferrer">TikTok @lemons3682</a>
+</footer>
+</main>
+</div>
+<div class="sbar" id="sbar" aria-hidden="true"><label class="sfield"><svg class="ic" aria-hidden="true"><use href="#i-search"/></svg><input id="q" type="search" maxlength="60" spellcheck="false" autocomplete="off" enterkeyhint="search" tabindex="-1" data-ph="search.ph" data-al="search.ph"><button class="x" id="qclear" type="button" hidden data-al="search.clear"><svg class="ic" aria-hidden="true"><use href="#i-close"/></svg></button></label></div>
+<nav class="dock" id="dock" aria-label="Main">
+<a class="d-item on" href="#home" data-view="home" data-al="nav.home"><svg class="ic" aria-hidden="true"><use href="#i-home"/></svg><span data-t="nav.home">Home</span></a>
+<a class="d-item" href="#products" data-view="products" data-al="nav.products"><svg class="ic" aria-hidden="true"><use href="#i-grid"/></svg><span data-t="nav.products">Products</span></a>
+<a class="d-item" href="#about" data-view="about" data-al="nav.about"><svg class="ic" aria-hidden="true"><use href="#i-info"/></svg><span data-t="nav.about">About</span></a>
+</nav>
+<script>
+var I18N={
+en:{
+'search.ph':'Search products','search.none':'No products match “{q}”.','search.clear':'Clear search',
+'nav.home':'Home','nav.products':'Products','nav.about':'About',
+'hero.h1':'Software built with a little <em>heat</em>.',
+'hero.lede':'A keyboard app for Android and a Linux distro, both in Material design.',
+'hero.cta1':'Explore products','hero.cta2':'What we’re making',
+'soon':'Coming soon',
+'band.title':'Type with a little spark.',
+'band.text':'Material Keys is a keyboard app for Android, coming soon.',
+'band.btn':'See Material Keys','band2.title':'A desktop with a little spark.','band2.text':'Metaria Linux is a Linux distro based on Ubuntu, with a Material design, coming soon.','band2.btn':'See Metaria Linux',
+'about.tt':'Find me on TikTok','prod.title':'Products','prod.sub':'Everything in the lineup, in one place.',
+'d.glint':'A keyboard app for Android, designed with the same Material 3 philosophy as everything at ch://i.','d.metaria':'A Linux distro based on Ubuntu, with a Material design from the desktop to the apps.',
+'about.h1':'Spicy things, written in code.',
+'about.p':'The story behind the name, the symbols and Material Keys.',
+'about.c1t':'Why chilli?',
+'about.c1p':'ch://i is pronounced “chilli”. I love anything spicy, so the company is named after something hot.',
+'about.c2t':'Why ://?',
+'about.c2p':'I’m really into coding, so the name borrows :// from web addresses. It’s inspired by the Mozilla logo, moz://a. Mozilla and Firefox are among my favourite companies.',
+'about.c3t':'Where Material Keys comes from',
+'about.c3p':'Keyboards like Gboard and SwiftKey have boring designs and collect your data aggressively. What if you could have Gboard + no data collection, tons of customization and an actually Material design like Google promised?',
+
+'label.lang':'Change language','label.theme':'Switch between light and dark theme','label.settings':'Settings','egg':'You found the chilli. Stay spicy.','set.lang':'Language','set.theme':'Theme','th.auto':'Auto','th.light':'Light','th.dark':'Dark','label.squish':'Squish the shape'
+},
+es:{
+'search.ph':'Buscar productos','search.none':'Ningún producto coincide con “{q}”.','search.clear':'Borrar búsqueda',
+'nav.home':'Inicio','nav.products':'Productos','nav.about':'Acerca de',
+'hero.h1':'Software creado con un poco de <em>picante</em>.',
+'hero.lede':'Una app de teclado para Android y una distro de Linux, ambas con diseño Material.',
+'hero.cta1':'Explorar productos','hero.cta2':'Lo que estamos creando',
+'soon':'Próximamente',
+'band.title':'Escribe con un poco de chispa.',
+'band.text':'Material Keys es una app de teclado para Android, muy pronto.',
+'band.btn':'Ver Material Keys','band2.title':'Un escritorio con un poco de chispa.','band2.text':'Metaria Linux es una distro de Linux basada en Ubuntu, con diseño Material, muy pronto.','band2.btn':'Ver Metaria Linux',
+'about.tt':'Sígueme en TikTok','prod.title':'Productos','prod.sub':'Todo lo de la gama, en un solo lugar.',
+'d.glint':'Una app de teclado para Android, diseñada con la misma filosofía Material 3 que todo en ch://i.','d.metaria':'Una distro de Linux basada en Ubuntu, con diseño Material del escritorio a las apps.',
+'about.h1':'Cosas picantes, escritas en código.',
+'about.p':'La historia detrás del nombre, los símbolos y Material Keys.',
+'about.c1t':'¿Por qué chilli?',
+'about.c1p':'ch://i se pronuncia “chilli”. Me encanta todo lo picante, así que la empresa lleva el nombre de algo ardiente.',
+'about.c2t':'¿Por qué ://?',
+'about.c2p':'Me apasiona programar, así que el nombre toma prestado :// de las direcciones web. Se inspira en el logotipo de Mozilla, moz://a. Mozilla y Firefox están entre mis empresas favoritas.',
+'about.c3t':'De dónde viene Material Keys',
+'about.c3p':'Teclados como Gboard y SwiftKey tienen diseños aburridos y recopilan tus datos de forma agresiva. ¿Y si pudieras tener Gboard + sin recopilación de datos, muchísima personalización y un diseño realmente Material como prometió Google?',
+
+'label.lang':'Cambiar idioma','label.theme':'Cambiar entre tema claro y oscuro','label.settings':'Ajustes','egg':'Has encontrado el chilli. Sigue picante.','set.lang':'Idioma','set.theme':'Tema','th.auto':'Automático','th.light':'Claro','th.dark':'Oscuro','label.squish':'Aplastar la forma'
+},
+fr:{
+'search.ph':'Rechercher des produits','search.none':'Aucun produit ne correspond à « {q} ».','search.clear':'Effacer la recherche',
+'nav.home':'Accueil','nav.products':'Produits','nav.about':'À propos',
+'hero.h1':'Des logiciels conçus avec un peu de <em>piquant</em>.',
+'hero.lede':'Une application de clavier pour Android et une distribution Linux, toutes deux en Material design.',
+'hero.cta1':'Découvrir les produits','hero.cta2':'Ce que nous créons',
+'soon':'Bientôt disponible',
+'band.title':'Écrivez avec un peu d’étincelle.',
+'band.text':'Material Keys est une application de clavier pour Android, bientôt disponible.',
+'band.btn':'Voir Material Keys','band2.title':'Un bureau avec un peu d’étincelle.','band2.text':'Metaria Linux est une distribution Linux basée sur Ubuntu, avec un design Material, bientôt disponible.','band2.btn':'Voir Metaria Linux',
+'about.tt':'Retrouve-moi sur TikTok','prod.title':'Produits','prod.sub':'Toute la gamme, au même endroit.',
+'d.glint':'Une application de clavier pour Android, conçue avec la même philosophie Material 3 que tout chez ch://i.','d.metaria':'Une distribution Linux basée sur Ubuntu, avec un design Material du bureau aux applications.',
+'about.h1':'Des choses épicées, écrites en code.',
+'about.p':'L’histoire derrière le nom, les symboles et Material Keys.',
+'about.c1t':'Pourquoi chilli ?',
+'about.c1p':'ch://i se prononce « chilli ». J’adore tout ce qui est épicé, alors l’entreprise porte le nom de quelque chose de brûlant.',
+'about.c2t':'Pourquoi :// ?',
+'about.c2p':'Je suis passionné de code, alors le nom emprunte :// aux adresses web. Il s’inspire du logo de Mozilla, moz://a. Mozilla et Firefox font partie de mes entreprises préférées.',
+'about.c3t':'D’où vient Material Keys',
+'about.c3p':'Des claviers comme Gboard et SwiftKey ont des designs ennuyeux et collectent vos données de façon agressive. Et si vous pouviez avoir Gboard + aucune collecte de données, énormément de personnalisation et un vrai design Material comme Google l’avait promis ?',
+
+'label.lang':'Changer de langue','label.theme':'Basculer entre thème clair et sombre','label.settings':'Paramètres','egg':'Tu as trouvé le chilli. Reste piquant.','set.lang':'Langue','set.theme':'Thème','th.auto':'Auto','th.light':'Clair','th.dark':'Sombre','label.squish':'Écraser la forme'
+},
+de:{
+'search.ph':'Produkte suchen','search.none':'Kein Produkt passt zu „{q}“.','search.clear':'Suche löschen',
+'nav.home':'Start','nav.products':'Produkte','nav.about':'Über uns',
+'hero.h1':'Software, gebaut mit einer Prise <em>Schärfe</em>.',
+'hero.lede':'Eine Tastatur-App für Android und eine Linux-Distribution, beide im Material Design.',
+'hero.cta1':'Produkte entdecken','hero.cta2':'Woran wir arbeiten',
+'soon':'Bald verfügbar',
+'band.title':'Tippen mit einem Funken.',
+'band.text':'Material Keys ist eine Tastatur-App für Android, bald verfügbar.',
+'band.btn':'Material Keys ansehen','band2.title':'Ein Desktop mit einem Funken.','band2.text':'Metaria Linux ist eine Linux-Distribution auf Basis von Ubuntu mit Material Design, bald verfügbar.','band2.btn':'Metaria Linux ansehen',
+'about.tt':'Folge mir auf TikTok','prod.title':'Produkte','prod.sub':'Die ganze Produktpalette an einem Ort.',
+'d.glint':'Eine Tastatur-App für Android, gestaltet mit derselben Material-3-Philosophie wie alles bei ch://i.','d.metaria':'Eine Linux-Distribution auf Basis von Ubuntu, mit Material Design vom Desktop bis zu den Apps.',
+'about.h1':'Scharfe Sachen, in Code geschrieben.',
+'about.p':'Die Geschichte hinter dem Namen, den Symbolen und Material Keys.',
+'about.c1t':'Warum chilli?',
+'about.c1p':'ch://i wird „chilli“ ausgesprochen. Ich liebe alles Scharfe, also trägt das Unternehmen den Namen von etwas Feurigem.',
+'about.c2t':'Warum ://?',
+'about.c2p':'Ich programmiere für mein Leben gern, deshalb leiht sich der Name :// von Webadressen. Er ist vom Mozilla-Logo inspiriert, moz://a. Mozilla und Firefox gehören zu meinen Lieblingsunternehmen.',
+'about.c3t':'Woher Material Keys kommt',
+'about.c3p':'Tastaturen wie Gboard und SwiftKey haben langweilige Designs und sammeln aggressiv deine Daten. Was, wenn du Gboard + keine Datensammlung, jede Menge Anpassung und ein wirklich echtes Material Design haben könntest, wie Google es versprochen hat?',
+
+'label.lang':'Sprache ändern','label.theme':'Zwischen hellem und dunklem Design wechseln','label.settings':'Einstellungen','egg':'Du hast das chilli gefunden. Bleib scharf.','set.lang':'Sprache','set.theme':'Design','th.auto':'Automatisch','th.light':'Hell','th.dark':'Dunkel','label.squish':'Form quetschen'
+},
+pl:{
+'nav.home':'Start','nav.products':'Produkty','nav.about':'O nas',
+'hero.h1':'Oprogramowanie z odrobiną <em>ostrości</em>.',
+'hero.lede':'Aplikacja klawiatury na Androida i dystrybucja Linuksa, obie w stylu Material.',
+'hero.cta1':'Poznaj produkty','hero.cta2':'Nad czym pracujemy',
+'soon':'Wkrótce',
+'band.title':'Pisz z iskrą.',
+'band.text':'Material Keys to aplikacja klawiatury na Androida, już wkrótce.',
+'band.btn':'Zobacz Material Keys','band2.title':'Pulpit z odrobiną iskry.','band2.text':'Metaria Linux to dystrybucja Linuksa oparta na Ubuntu, w stylu Material, już wkrótce.','band2.btn':'Zobacz Metaria Linux',
+'about.tt':'Znajdź mnie na TikToku','prod.title':'Produkty','prod.sub':'Cała oferta w jednym miejscu.',
+'d.glint':'Aplikacja klawiatury na Androida, zaprojektowana w tej samej filozofii Material 3 co wszystko w ch://i.','d.metaria':'Dystrybucja Linuksa oparta na Ubuntu, w stylu Material od pulpitu po aplikacje.',
+'search.ph':'Szukaj produktów','search.none':'Brak produktów pasujących do „{q}”.','search.clear':'Wyczyść wyszukiwanie',
+'about.h1':'Ostre rzeczy, pisane kodem.',
+'about.p':'Historia nazwy, symboli i Material Keys.',
+'about.c1t':'Dlaczego chilli?',
+'about.c1p':'ch://i czytamy „chilli”. Uwielbiam wszystko, co ostre, więc firma dostała nazwę po czymś pikantnym.',
+'about.c2t':'Dlaczego ://?',
+'about.c2p':'Bardzo lubię programować, więc nazwa pożycza :// z adresów internetowych. Inspiracją było logo Mozilli, moz://a. Mozilla i Firefox należą do moich ulubionych firm.',
+'about.c3t':'Skąd się wziął Material Keys',
+'about.c3p':'Klawiatury takie jak Gboard i SwiftKey mają nudny wygląd i agresywnie zbierają twoje dane. A gdyby dało się mieć Gboard + brak zbierania danych, mnóstwo personalizacji i naprawdę materialowy design, jaki obiecał Google?',
+
+'label.lang':'Zmień język','label.theme':'Przełącz motyw jasny i ciemny','label.settings':'Ustawienia','egg':'Znalazłeś chilli. Zostań pikantny.','set.lang':'Język','set.theme':'Motyw','th.auto':'Automatyczny','th.light':'Jasny','th.dark':'Ciemny','label.squish':'Ściśnij kształt'
+},
+ru:{
+'nav.home':'Главная','nav.products':'Продукты','nav.about':'О нас',
+'hero.h1':'Софт, созданный с щепоткой <em>остроты</em>.',
+'hero.lede':'Приложение-клавиатура для Android и дистрибутив Linux, оба в стиле Material.',
+'hero.cta1':'Смотреть продукты','hero.cta2':'Над чем мы работаем',
+'soon':'Скоро',
+'band.title':'Печатайте с искоркой.',
+'band.text':'Material Keys — приложение-клавиатура для Android, скоро.',
+'band.btn':'Смотреть Material Keys','band2.title':'Рабочий стол с искрой.','band2.text':'Metaria Linux — дистрибутив Linux на основе Ubuntu с дизайном Material, скоро.','band2.btn':'Смотреть Metaria Linux',
+'about.tt':'Я в TikTok','prod.title':'Продукты','prod.sub':'Вся линейка в одном месте.',
+'d.glint':'Приложение-клавиатура для Android, созданное в той же философии Material 3, что и всё в ch://i.','d.metaria':'Дистрибутив Linux на основе Ubuntu с дизайном Material — от рабочего стола до приложений.',
+'search.ph':'Поиск продуктов','search.none':'Нет продуктов по запросу «{q}».','search.clear':'Очистить поиск',
+'about.h1':'Острые вещи, написанные кодом.',
+'about.p':'История названия, символов и Material Keys.',
+'about.c1t':'Почему chilli?',
+'about.c1p':'ch://i читается «чилли». Я обожаю всё острое, поэтому компанию назвали в честь чего-то жгучего.',
+'about.c2t':'Почему ://?',
+'about.c2p':'Я сильно увлечён программированием, поэтому в названии использован :// из веб-адресов. Идея пришла от логотипа Mozilla, moz://a. Mozilla и Firefox — одни из моих любимых компаний.',
+'about.c3t':'Откуда взялся Material Keys',
+'about.c3p':'У клавиатур вроде Gboard и SwiftKey скучный дизайн, и они агрессивно собирают ваши данные. А что, если бы можно было получить Gboard + никакого сбора данных, море настроек и по-настоящему Material-дизайн, каким его обещал Google?',
+
+'label.lang':'Сменить язык','label.theme':'Переключить светлую и тёмную тему','label.settings':'Настройки','egg':'Ты нашёл chilli. Оставайся острым.','set.lang':'Язык','set.theme':'Тема','th.auto':'Авто','th.light':'Светлый','th.dark':'Тёмный','label.squish':'Сжать фигуру'
+}
+};
+var LANGS={en:'English',es:'Español',fr:'Français',de:'Deutsch',pl:'Polski',ru:'Русский'};
+var lang='en';
+try{
+var saved=localStorage.getItem('chi-lang');
+var nav2=((navigator.language||'en')+'').slice(0,2);
+if(saved&&Object.prototype.hasOwnProperty.call(LANGS,saved)) lang=saved; else if(Object.prototype.hasOwnProperty.call(LANGS,nav2)) lang=nav2;
+}catch(e){}
+function t(k,d){
+var s=(I18N[lang]&&I18N[lang][k])||I18N.en[k]||k;
+return d===undefined?s:s.replace('{d}',d);
+}
+var ITEMS=[{id:'glint',nm:'Material Keys',c:'p',n:5,a:.13},{id:'metaria',nm:'Metaria Linux',c:'s',n:7,a:.1}];
+var $=function(s){return document.querySelector(s)};
+var ic=function(id){return '<svg class="ic" aria-hidden="true"><use href="#i-'+id+'"/></svg>'};
+var RM=window.matchMedia&&matchMedia('(prefers-reduced-motion: reduce)').matches;
+function appSVG(){return '<svg viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="50" fill="#26262F"/><path transform="translate(50 33) scale(10)" d="M0-1C.1-.4 .4-.1 1 0 .4.1 .1.4 0 1-.1.4-.4.1-1 0-.4-.1-.1-.4 0-1Z" fill="#C4C4F5" stroke="#C4C4F5" stroke-width=".18" stroke-linejoin="round"/><path transform="translate(31.8 40) scale(5.8)" d="M0-1C.1-.4 .4-.1 1 0 .4.1 .1.4 0 1-.1.4-.4.1-1 0-.4-.1-.1-.4 0-1Z" fill="#C9C9DE" stroke="#C9C9DE" stroke-width=".18" stroke-linejoin="round"/><path transform="translate(68.1 40) scale(5.8)" d="M0-1C.1-.4 .4-.1 1 0 .4.1 .1.4 0 1-.1.4-.4.1-1 0-.4-.1-.1-.4 0-1Z" fill="#F8D3F1" stroke="#F8D3F1" stroke-width=".18" stroke-linejoin="round"/><rect x="21.8" y="51.2" width="17.3" height="8.7" rx="4" fill="#C4C4F5"/><rect x="42" y="51.2" width="16" height="8.7" rx="4" fill="#C9C9DE"/><rect x="61" y="51.2" width="17.2" height="8.7" rx="4" fill="#F8D3F1"/><rect x="22.3" y="63" width="10" height="7.8" rx="3.5" fill="#C4C4F5"/><rect x="34.8" y="63" width="30.4" height="7.8" rx="3.5" fill="#C9C9DE"/><rect x="67.8" y="63" width="10" height="7.8" rx="3.5" fill="#F8D3F1"/></svg>'}
+function addBlobs(){
+[].forEach.call(document.querySelectorAll('.fam'),function(f,i){
+f.insertAdjacentHTML('afterbegin','<svg class="blob" viewBox="0 0 200 200" aria-hidden="true"><path d="'+blob([6,8,5][i],[.11,.09,.13][i])+'" fill="currentColor"/></svg>');
+});
+}
+function esc(x){return x.replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
+$('body').insertAdjacentHTML('afterbegin','<div class="scrim" id="scrim" hidden></div>');
+$('.tools').insertAdjacentHTML('beforeend','<div class="menu" id="langMenu" role="menu" hidden></div><div class="menu" id="themeMenu" role="menu" hidden></div>');
+$('.hero>div').insertAdjacentHTML('afterend','<div class="stage pop" style="--i:2" id="stage"></div>');
+[].forEach.call(document.querySelectorAll('.band'),function(b,i){
+if(!i) b.firstElementChild.insertAdjacentHTML('afterend','<div class="stage-sm shape app"><button class="shape-in app" type="button" data-al="label.squish">'+appSVG()+'</button></div>');
+b.insertAdjacentHTML('afterbegin','<svg class="blob" viewBox="0 0 200 200" aria-hidden="true"><path d="'+blob(i?7:5,i?.1:.13)+'" fill="currentColor"/></svg>');
+});
+$('#products .ph').insertAdjacentHTML('afterend','<div id="groups"></div>');
+$('#sbar').insertAdjacentHTML('beforeend','<div class="spanel" id="spanel" hidden></div>');
+$('#dock').insertAdjacentHTML('afterbegin','<span class="ind" id="ind"></span>');
+function blob(n,a){
+var d='',N=240;
+for(var k=0;k<=N;k++){
+var q=k/N*Math.PI*2, r=88*(1+a*Math.cos(n*q))/(1+a);
+d+=(k?'L':'M')+(100+r*Math.cos(q)).toFixed(2)+' '+(100+r*Math.sin(q)).toFixed(2);
+}
+return d+'Z';
+}
+function shapeSVG(n,a,c,on){
+return '<button class="shape-in" type="button" data-al="label.squish"><svg viewBox="0 0 200 200"><g class="spin"><path d="'+blob(n,a)+'" fill="var(--'+c+')"/></g><g class="tw"><use href="#i-spark" x="70" y="70" width="60" height="60" fill="var(--'+on+')"/></g></svg></button>';
+}
+var logo=$('#logo');
+logo.insertAdjacentHTML('afterbegin','<svg class="mark" viewBox="0 0 200 200" aria-hidden="true"><path d="'+blob(10,.07)+'" style="fill:#C3C5F0"/><text class="mk" x="100" y="124" text-anchor="middle">://</text></svg>');
+logo.addEventListener('pointerdown',function(e){if(e.target.closest&&e.target.closest('.mark')) logo.classList.add('down')});
+['pointerup','pointercancel','pointerleave'].forEach(function(n){logo.addEventListener(n,function(){logo.classList.remove('down')})});
+var HERO=[
+{n:10,a:.07,c:'pc',on:'on-pc',dur:44},
+{n:7,a:.10,c:'sc',on:'on-sc',dur:32,rev:1},
+{n:6,a:.09,c:'tc',on:'on-tc',dur:52}
+];
+$('#stage').innerHTML=HERO.map(function(h,i){return '<div class="shape hs s'+(i+1)+'">'+shapeSVG(h.n,h.a,h.c,h.on)+'</div>'}).join('');
+[].forEach.call(document.querySelectorAll('.hs .spin'),function(sp,i){
+sp.style.animationDuration=HERO[i].dur+'s'; if(HERO[i].rev) sp.style.animationDirection='reverse';
+});
+function spinShape(e){
+var b=e.target.closest&&e.target.closest('.shape-in'); if(!b||!b.animate) return;
+if(b.classList.contains('app')) return;
+if(b._sp&&b._sp.playState==='running'){
+b.animate([{scale:'1'},{scale:'1.28 .76',offset:.22},{scale:'.82 1.22',offset:.48},{scale:'1.1 .94',offset:.72},{scale:'1'}],{duration:1400,easing:'ease-out'});
+b.animate([{rotate:'0deg'},{rotate:'360deg'}],{duration:5500,easing:'ease-in-out',composite:'add'});
+return}
+b._sp=b.animate([
+{transform:'scale(1,1) rotate(0deg)'},{transform:'scale(.8,1.24) rotate(70deg)',offset:.2},{transform:'scale(1.18,.84) rotate(170deg)',offset:.45},
+{transform:'scale(.94,1.07) rotate(280deg)',offset:.7},{transform:'scale(1,1) rotate(360deg)'}
+],{duration:900,easing:'ease-out'});
+}
+document.addEventListener('pointerdown',spinShape);
+document.addEventListener('click',function(e){if(e.detail===0) spinShape(e)});
+var q='';
+function applyStatic(){
+[].forEach.call(document.querySelectorAll('[data-t]'),function(el){el.textContent=t(el.getAttribute('data-t'))});
+[].forEach.call(document.querySelectorAll('[data-th]'),function(el){el.innerHTML=t(el.getAttribute('data-th'))});
+[].forEach.call(document.querySelectorAll('[data-al]'),function(el){el.setAttribute('aria-label',t(el.getAttribute('data-al')))});
+[].forEach.call(document.querySelectorAll('[data-ph]'),function(el){el.setAttribute('placeholder',t(el.getAttribute('data-ph')))});
+}
+function hit(x){
+return !q||(x.nm+' '+t('d.'+x.id)).toLowerCase().indexOf(q.toLowerCase())>-1;
+}
+function renderGroups(){
+var g=$('#groups'), cards=ITEMS.filter(hit).map(function(x,n){
+return '<article class="card c-'+x.c+' pop" style="--i:'+n+'"><svg class="blob" viewBox="0 0 200 200" aria-hidden="true"><path d="'+blob(x.n,x.a)+'" fill="currentColor"/></svg><h3>'+x.nm+'</h3><p>'+t('d.'+x.id)+'</p><div class="tags"><span class="chip">'+t('soon')+'</span></div></article>';
+}).join('');
+g.innerHTML=cards?'<div class="grid">'+cards+'</div>':(q?'<p class="none">'+esc(t('search.none').replace('{q}',q))+'</p>':'');
+g.classList.toggle('qmode',!!q);
+if(!q&&!$('#products').hidden) armReveal('#groups .pop');
+}
+$('#meet').addEventListener('click',function(){
+var m=$('#make'), r=m.getBoundingClientRect();
+window.scrollTo({top:Math.max(0,scrollY+r.top-(innerHeight-r.height)/2),behavior:RM?'auto':'smooth'});
+if(m.animate&&!RM) m.animate([{transform:'scale(1)'},{transform:'scale(1.025)',offset:.45},{transform:'scale(1)'}],{duration:900,delay:250,easing:'cubic-bezier(.33,1,.68,1)'});
+});
+var dock=$('#dock'), ind=$('#ind'), links=[].slice.call(dock.querySelectorAll('.d-item'));
+var VIEWS=['home','products','about'];
+var scrollPos={home:0,products:0,about:0}, current='home', forward=false;
+try{history.scrollRestoration='manual'}catch(e){}
+window.addEventListener('scroll',function(){scrollPos[current]=window.scrollY;updateBar()},{passive:true});
+function markForward(){forward=true;setTimeout(function(){forward=false},400)}
+function place(squish){
+var on=dock.querySelector('.on'); if(!on) return;
+ind.style.left=on.offsetLeft+'px'; ind.style.width=on.offsetWidth+'px';
+if(squish&&ind.animate) ind.animate([
+{transform:'scale(1,1)'},{transform:'scale(1.1,.88)',offset:.3},{transform:'scale(.97,1.06)',offset:.65},{transform:'scale(1,1)'}
+],{duration:560,easing:'ease-out'});
+}
+function show(v,restore){
+current=v;
+if(v!=='products'&&q){q='';qIn.value='';qClear.hidden=true;renderGroups()}
+VIEWS.forEach(function(id){$('#'+id).hidden=id!==v});
+var vEl=$('#'+v); vEl.classList.remove('enter');
+if(!restore){void vEl.offsetWidth; vEl.classList.add('enter')}
+links.forEach(function(a){
+var on=a.dataset.view===v; a.classList.toggle('on',on);
+if(on) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+});
+place(true); window.scrollTo(0,restore?(scrollPos[v]||0):0); updateBar(); armReveal();
+}
+var booted=false;
+function route(){
+var h=location.hash.slice(1), v=VIEWS.indexOf(h)>-1?h:'home';
+var restore=!forward&&booted; forward=false; booted=true;
+show(v,restore);
+}
+document.addEventListener('click',function(e){
+var a=e.target.closest&&e.target.closest('a[href^="#"]'); if(!a) return;
+var h=a.getAttribute('href').slice(1); if(VIEWS.indexOf(h)<0) return;
+e.preventDefault();
+if(current===h){window.scrollTo({top:0,behavior:'smooth'});return}
+markForward(); location.hash='#'+h;
+});
+window.addEventListener('hashchange',route);
+window.addEventListener('resize',function(){place(false)});
+var sbar=$('#sbar'), qIn=$('#q'), qClear=$('#qclear');
+function updateBar(){
+var on=current==='products'&&(q||window.scrollY>70||document.activeElement===qIn);
+sbar.classList.toggle('show',!!on);
+sbar.setAttribute('aria-hidden',String(!on));
+qIn.tabIndex=on?0:-1;
+document.body.classList.toggle('searching',!!on);
+}
+qIn.addEventListener('input',function(){
+q=qIn.value.trim(); qClear.hidden=!qIn.value; renderGroups(); updateBar();
+});
+qClear.addEventListener('click',function(){
+qIn.value=''; q=''; qClear.hidden=true; renderGroups(); updateBar(); qIn.focus();
+});
+var sp=$('#spanel'), scrim=$('#scrim');
+function fitPanel(){
+if(sp.hidden) return;
+var vv=window.visualViewport, bottom=vv?vv.offsetTop+vv.height:innerHeight;
+var top=$('.sfield').getBoundingClientRect().bottom+10;
+var h=bottom-top-54-12;
+sp.style.maxHeight=Math.max(96,Math.min(h,420))+'px';
+}
+function renderPanel(){
+var rows=ITEMS.filter(hit), ql=q.toLowerCase();
+sp.innerHTML=rows.length?rows.map(function(x){
+var n=x.nm, i=ql?n.toLowerCase().indexOf(ql):-1;
+var label=i>-1?esc(n.slice(0,i))+'<b>'+esc(n.slice(i,i+q.length))+'</b>'+esc(n.slice(i+q.length)):esc(n);
+return '<button type="button" class="srow" data-id="'+x.id+'">'+ic('search')+'<span>'+label+'</span></button>';
+}).join(''):'<p class="none">'+esc(t('search.none').replace('{q}',q))+'</p>';
+fitPanel();
+}
+var pending=false, settleT=0;
+function reveal(){if(!pending) return; pending=false; clearTimeout(settleT); sp.hidden=false; renderPanel()}
+function onVV(){if(pending){clearTimeout(settleT);settleT=setTimeout(reveal,150)} fitPanel()}
+if(window.visualViewport){visualViewport.addEventListener('resize',onVV);visualViewport.addEventListener('scroll',fitPanel)}
+window.addEventListener('resize',onVV);
+qIn.addEventListener('input',renderPanel);
+qIn.addEventListener('focus',function(){
+scrim.hidden=false; updateBar();
+var vv=window.visualViewport, kbOpen=vv&&(innerHeight-vv.height>120);
+pending=true; clearTimeout(settleT);
+if(kbOpen) reveal(); else settleT=setTimeout(reveal,320);
+});
+qIn.addEventListener('blur',function(){pending=false;clearTimeout(settleT);scrim.hidden=true;sp.hidden=true;updateBar()});
+qIn.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key==='Escape') qIn.blur()});
+scrim.addEventListener('click',function(){qIn.blur()});
+sp.addEventListener('pointerdown',function(e){e.preventDefault()});
+sp.addEventListener('click',function(e){
+var b=e.target.closest('.srow'); if(!b) return;
+var x=ITEMS.filter(function(i){return i.id===b.dataset.id})[0];
+qIn.value=x.nm; q=x.nm; qClear.hidden=false; renderGroups(); qIn.blur();
+});
+var menus={lang:{b:$('#langBtn'),m:$('#langMenu')},theme:{b:$('#themeBtn'),m:$('#themeMenu')}};
+var TH='auto';
+try{var st=localStorage.getItem('chi-theme'); if(st==='light'||st==='dark') TH=st}catch(e){}
+function row(attr,v,on,label){
+return '<button type="button" role="menuitemradio" aria-checked="'+on+'" '+attr+'="'+v+'"><span>'+label+'</span>'+(on?ic('check'):'')+'</button>';
+}
+function renderMenu(){
+menus.lang.m.innerHTML=Object.keys(LANGS).map(function(k){return row('data-lang',k,k===lang,LANGS[k])}).join('');
+menus.theme.m.innerHTML=['auto','light','dark'].map(function(m){return row('data-mode',m,m===TH,t('th.'+m))}).join('');
+}
+function setTheme(m){
+TH=m;
+if(m==='auto') document.documentElement.removeAttribute('data-theme'); else document.documentElement.setAttribute('data-theme',m);
+try{localStorage.setItem('chi-theme',m)}catch(e){}
+renderMenu();
+}
+function closeMenu(except){
+Object.keys(menus).forEach(function(k){
+var o=menus[k]; if(k===except||o.m.hidden||o.m.classList.contains('out')) return;
+o.b.setAttribute('aria-expanded','false'); o.m.classList.add('out');
+var done=function(){if(o.m.classList.contains('out')){o.m.hidden=true;o.m.classList.remove('out')}};
+o.m.addEventListener('animationend',done,{once:true});
+setTimeout(done,420);
+});
+}
+function setLang(l){
+lang=l;
+try{localStorage.setItem('chi-lang',l)}catch(e){}
+document.documentElement.lang=l;
+applyStatic(); renderGroups(); renderMenu();
+place(false);
+}
+Object.keys(menus).forEach(function(k){
+var o=menus[k];
+o.b.addEventListener('click',function(e){
+e.stopPropagation();
+if(o.m.hidden||o.m.classList.contains('out')){
+closeMenu(k); o.m.classList.remove('out'); o.m.hidden=false; o.b.setAttribute('aria-expanded','true');
+}else closeMenu();
+});
+});
+menus.lang.m.addEventListener('click',function(e){
+var b=e.target.closest('[data-lang]'); if(!b) return;
+setLang(b.dataset.lang); closeMenu();
+});
+menus.theme.m.addEventListener('click',function(e){
+var m=e.target.closest('[data-mode]'); if(m){e.stopPropagation(); setTheme(m.dataset.mode)}
+});
+document.addEventListener('click',function(e){if(!e.target.closest('.tools')) closeMenu()});
+document.addEventListener('keydown',function(e){if(e.key==='Escape') closeMenu()});
+var pressed=[];
+function pressOff(){pressed.forEach(function(x){x.classList.remove('down')}); pressed=[]}
+document.addEventListener('pointerdown',function(e){
+var t=e.target; if(!t.closest) return;
+var onCtl=t.closest('a,button');
+['.card,.fam','.band','.shape-in.app'].forEach(function(sel,i){
+if(i===1&&onCtl&&!t.closest('.shape-in.app')) return;
+if(i===1&&t.closest('.shape-in.app')) return;
+var c=t.closest(sel); if(c){c.classList.add('down'); pressed.push(c)}
+});
+});
+['pointerup','pointercancel','pointerleave'].forEach(function(n){document.addEventListener(n,pressOff)});
+function egg(el){
+if($('.toast')) return;
+var r=el.getBoundingClientRect(), x=r.left+r.width/2, y=r.top+r.height/2;
+document.body.insertAdjacentHTML('beforeend','<div class="toast" role="status">'+ic('flame')+'<span>'+t('egg')+'</span></div>');
+var tt=$('.toast');
+setTimeout(function(){if(tt.animate&&!RM) tt.animate([{opacity:1},{opacity:0}],{duration:400}).onfinish=function(){tt.remove()}; else tt.remove()},2800);
+if(RM) return;
+for(var i=0;i<16;i++){
+var a=-Math.PI/2+(Math.random()-.5)*Math.PI*1.5, d=80+Math.random()*130, z=10+Math.random()*14, p=document.createElement('span');
+p.className='bit'; p.style.cssText='left:'+x+'px;top:'+y+'px;width:'+z+'px;height:'+z+'px;color:var(--'+['p','pc','tc'][i%3]+')';
+p.innerHTML='<svg viewBox="0 0 24 24" width="100%" height="100%" aria-hidden="true"><use href="#i-spark" fill="currentColor"/></svg>';
+document.body.appendChild(p);
+(function(p){p.animate([{transform:'translate(-50%,-50%) scale(.3)',opacity:1},{transform:'translate(calc(-50% + '+Math.cos(a)*d+'px),calc(-50% + '+Math.sin(a)*d+'px)) scale(1) rotate(180deg)',opacity:0}],{duration:900+Math.random()*500,easing:'cubic-bezier(.16,1,.3,1)'}).onfinish=function(){p.remove()}})(p);
+}
+}
+document.addEventListener('click',function(e){var v=e.target.closest&&e.target.closest('.ver'); if(v) egg(v)});
+document.addEventListener('click',function(e){
+var c=e.target.closest&&e.target.closest('.card,.fam,.band'); if(!c||c.classList.contains('tap')) return;
+c.classList.add('tap'); setTimeout(function(){c.classList.remove('tap')},750);
+});
+var rvTick=false;
+function checkReveal(){
+rvTick=false;
+var k=0;
+[].forEach.call(document.querySelectorAll('.pop.rv-wait'),function(e){
+if(e.getBoundingClientRect().top<innerHeight*.94){e.style.setProperty('--rd',k++); e.classList.remove('rv-wait'); e.classList.add('rv-in')}
+});
+}
+function armReveal(sel){
+if(RM) return;
+var els=[].slice.call(document.querySelectorAll(sel||'.view:not([hidden]) .pop'));
+if(!sel) els.forEach(function(e){e.classList.remove('rv-in','rv-wait')});
+els.forEach(function(e){if(e.getBoundingClientRect().top>innerHeight-30) e.classList.add('rv-wait')});
+}
+function queueReveal(){if(!rvTick){rvTick=true;requestAnimationFrame(checkReveal)}}
+window.addEventListener('scroll',queueReveal,{passive:true});
+window.addEventListener('resize',queueReveal);
+addBlobs();
+setLang(lang);
+route();
+place(false);
+requestAnimationFrame(function(){ind.classList.add('ready')});
+if(document.fonts&&document.fonts.ready) document.fonts.ready.then(function(){place(false)});
+</script>
+
+</body></html>
